@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>后台管理系统<a href="/toAddProduct">添加商品</a></div>
+	<div>
+		<table>
+			<thead>
+				<th>id</th>
+				<th>用户名</th>
+				<th>电话</th>
+				<th>密码</th>
+			</thead>
+			<tbody>
+				{{each list}}
+					<tr>
+						<td>{{$value.id}}</td>
+						<td>{{$value.username}}</td>
+						<td>{{$value.tel}}</td>
+						<td>{{$value.password}}</td>
+						<td>
+							<a href="/toEditPro?id={{$value.id}}">修改</a>
+							<a href="/deletePro">删除</a>
+						</td>
+					</tr>
+				{{/each}}
+				<!-- <tr>
+					<td>1</td>
+					<td>a</td>
+					<td>
+						<a href="#">修改</a>
+						<a href="#">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>b</td>
+					<td>
+						<a href="#">修改</a>
+						<a href="#">删除</a>
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
