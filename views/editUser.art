@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改商品</title>
+	<link rel="stylesheet" href="/www/style.css"> 
+</head>
+<body>
+	<form action="/editUser" method="post">
+		<input type="hidden" name="id" value="{{id}}">
+		用户名：<input type="text" name="username" value="{{username}}"><br>
+		电话：<input type="text" name="tel" value="{{tel}}"><br>
+		密码：<input type="text" name="password" value="{{password}}"><br>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

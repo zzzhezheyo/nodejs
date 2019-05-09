@@ -22,8 +22,8 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active index"><a href="/">用户管理</a></li>
-	        <li class="position"><a href="/toProduct">商品管理</a></li>
+	        <li class="index"><a href="/">用户管理</a></li>
+	        <li class="active product"><a href="/toProduct">商品管理</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right not-login">
 	        <li data-toggle="modal" data-target="#loginModal"><a href="#">欢迎你！</a></li>
@@ -33,39 +33,60 @@
 	        <li><a href="#">欢迎：</a></li>
 	        <li><a href="#" class="link-logout">注销</a></li>
 	      </ul>
-	    </div><!-- /.navbar-collapse -->
+	    </div>
 	</nav>
 
 	<div>
-		<a href="/toAddUser">
-		<button class="btn btn-primary" data-toggle="modal" data-target="#addPositionModal">添加用户</button>
+		<a href="/toAddProduct">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#addPositionModal">上架商品</button>
 		</a>
 	</div>
 	<div>
 		<table class="table table-bordered table-stripped">
 			<thead>
 				<th>id</th>
-				<th>用户名</th>
-				<th>电话</th>
-				<th>密码</th>
-				<th>操作</th>
+				<th>商品名称</th>
+		  	<th>商品类型</th>
+		  	<th>价格</th>
+		  	<th>操作</th>
 			</thead>
 			<tbody class="list-body">
 				{{each list}}
 					<tr>
 						<td>{{$value.id}}</td>
-						<td>{{$value.username}}</td>
-						<td>{{$value.tel}}</td>
-						<td>{{$value.password}}</td>
+						<td>{{$value.name}}</td>
+						<td>{{$value.type}}</td>
+						<td>{{$value.price}}</td>
 						<td>
-							<a href="/toEditUser?id={{$value.id}}">修改</a>
-							<a href="/toDeleteUser?id={{$value.id}}">删除</a>
+							<a href="/toEditProduct?id={{$value.id}}">修改</a>
+							<a href="/toDeleteProduct?id={{$value.id}}">下架商品</a>
 						</td>
 					</tr>
 				{{/each}}
-				
 			</tbody>
 		</table>
+
+		<!-- 分页 -->
+	  <nav aria-label="Page navigation">
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+
 	</div>
 </body>
 </html>

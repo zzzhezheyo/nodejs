@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="/www/style.css"> 
 </head>
 <body>
-	<form action="/editPro" method="post">
+	<form action="/editProduct" method="post">
 		<input type="hidden" name="id" value="{{id}}">
-		用户名：<input type="text" name="username" value="{{username}}"><br>
-		电话：<input type="text" name="tel" value="{{tel}}"><br>
-		密码：<input type="text" name="password" value="{{password}}"><br>
+		商品名称：<input type="text" name="name" value="{{name}}"><br>
+		类型：<input type="text" name="type" value="{{type}}"><br>
+		价格：<input type="text" name="price" value="{{price}}"><br>
 		<input type="submit" value="提交">
 	</form>
 </body>
