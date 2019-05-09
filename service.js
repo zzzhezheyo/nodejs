@@ -59,11 +59,8 @@ exports.editPro=(req,res) =>{
 		}
 	})
 }
-// exports.toDeletePro = (req,res) => {
-// 	res.render("deletePro",{});
-// }
 // 删除用户信息
-exports.deletePro = (req,res)=>{
+exports.toDeletePro = (req,res)=>{
 	let id = req.query.id;
 	let sql = 'delete from userinfo where id=?';
 	let data = [id];

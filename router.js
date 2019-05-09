@@ -11,9 +11,7 @@ router.post('/addProduct',service.addProduct);
 router.get('/toEditPro',service.toEditPro);
 // 编辑商品提交表单
 router.post('/editPro',service.editPro);
-// // 跳转到编辑商品信息页面
-// router.get('/toDeletePro',service.toDeletePro);
-// 添加商品（提交表单）
-router.post('/deletePro',service.deletePro);
+// 删除用户
+router.get('/toDeletePro',service.toDeletePro);
 
 module.exports = router;

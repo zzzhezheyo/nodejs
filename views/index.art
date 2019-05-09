@@ -23,7 +23,7 @@
 						<td>{{$value.password}}</td>
 						<td>
 							<a href="/toEditPro?id={{$value.id}}">修改</a>
-							<a href="/deletePro">删除</a>
+							<a href="/toDeletePro?id={{$value.id}}">删除</a>
 						</td>
 					</tr>
 				{{/each}}
