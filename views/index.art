@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="www/libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="www/style.css">
 </head>
 <body>
 
@@ -24,6 +25,7 @@
 	      <ul class="nav navbar-nav">
 	        <li class="active index"><a href="/">用户管理</a></li>
 	        <li class="position"><a href="/toProduct">商品管理</a></li>
+					<li class="order"><a href="/toOrder">订单管理</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right not-login">
 	        <li data-toggle="modal" data-target="#loginModal"><a href="#">欢迎你！</a></li>
@@ -36,7 +38,7 @@
 	    </div><!-- /.navbar-collapse -->
 	</nav>
 
-	<div>
+	<div class="add_btn">
 		<a href="/toAddUser">
 		<button class="btn btn-primary" data-toggle="modal" data-target="#addPositionModal">添加用户</button>
 		</a>

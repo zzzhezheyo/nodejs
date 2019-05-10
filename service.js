@@ -133,3 +133,41 @@ exports.toDeleteProduct = (req,res)=>{
 		}
 	})
 }
+// 跳转订单页面
+exports.toOrder = (req,res) => {
+	let sql = "select * from orderPro"
+	db.base(sql,null,(result)=>{
+		res.render("order",{list:result});
+	});
+}
+// 跳转编辑页面
+exports.toEditOrder=(req,res) =>{
+	let id = req.query.id;
+	let sql = "select * from orderPro where id=?";
+	let data = [id];
+	db.base(sql,data,(result)=>{
+		res.render('editOrder',result[0]);
+	})
+}
+//编辑商品更新数据
+exports.editOrder=(req,res) =>{
+	let info = req.body;
+	let sql = 'update orderPro set name=?,mount=?,username=?,usertel=? where id=?';
+	let data =[info.name,info.mount,info.username,info.usertel,info.id];
+	db.base(sql,data,(result)=>{
+		if(result.affectedRows == 1){
+			res.redirect('/toOrder');
+		}
+	})
+}
+// 删除订单信息
+exports.toDeleteOrder = (req,res)=>{
+	let id = req.query.id;
+	let sql = 'delete from orderPro where id=?';
+	let data = [id];
+	db.base(sql,data,(result)=>{
+		if(result.affectedRows == 1){
+			res.redirect('/toOrder');
+		}
+	})
+}

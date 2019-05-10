@@ -1,3 +1,11 @@
-table{
-	border:1px solid #666;
+.table{
+	width:1200px;
+	margin-left:80px;
+}
+.add_btn{
+	margin-left: 80px;
+	margin-bottom:20px;
+}
+.pagination{
+	margin-left: 1000px;
 }

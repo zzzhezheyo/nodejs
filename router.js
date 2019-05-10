@@ -25,5 +25,13 @@ router.get('/toEditProduct',service.toEditProduct);
 router.post('/editProduct',service.editProduct);
 // 删除商品
 router.get('/toDeleteProduct',service.toDeleteProduct);
+// 订单管理
+router.get('/toOrder',service.toOrder);
+// 跳转到编辑订单信息页面
+router.get('/toEditOrder',service.toEditOrder);
+// 编辑订单提交表单
+router.post('/editOrder',service.editOrder);
+// 删除订单
+router.get('/toDeleteOrder',service.toDeleteOrder);
 
 module.exports = router;

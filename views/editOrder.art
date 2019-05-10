@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改商品</title>
+	<link rel="stylesheet" href="/www/style.css"> 
+</head>
+<body>
+	<form action="/editOrder" method="post">
+		<input type="hidden" name="id" value="{{id}}">
+		商品名：<input type="text" name="name" value="{{name}}"><br>
+		数量：<input type="text" name="mount" value="{{mount}}"><br>
+		下单者：<input type="text" name="username" value="{{username}}"><br>
+		电话：<input type="text" name="usertel" value="{{usertel}}"><br>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>
